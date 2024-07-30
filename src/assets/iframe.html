@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iframe estático</title>
+</head>
+
+<body>
+    <h1>iframe estático</h1>
+    <p>Este es un iframe estático.</p>
+
+    <form id="myForm" action="">
+        <input type="text" id="nombre" placeholder="Nombre">
+        <button type="button" onclick="sendFormData()">Enviar</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        function sendFormData() {
+            const form = document.getElementById('myForm');
+            const nombre = form.querySelector('#nombre').value;
+            const data = { nombre };
+
+            // Enviar datos al padre
+            window.parent.postMessage(data, '*');
+            showResult('Data enviada al padre: ' + JSON.stringify(data));
+        }
+
+        function showResult(result) {
+            document.getElementById('result').innerHTML = result;
+        }
+    </script>
+</body>
+
+</html>
