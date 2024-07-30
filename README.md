@@ -1,4 +1,13 @@
-# HolaIframe
+# Angular hola-iframe
+
+Cómo pasar datos de un iframe contenido en un componente angular.
+
+## Componentes
+
+- iframe-static: Muestra cómo agregar un iframe.html localizado en assets.
+- iframe-dynamic: Muestra cómo agregar un iframe construido en el componente padre.
+
+---
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.6.
 
